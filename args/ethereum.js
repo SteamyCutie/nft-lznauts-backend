@@ -1,0 +1,8 @@
+module.exports = [
+  "https://ipfs.io/ipfs/QmX6kjd6EJert5v6V2ULDM6cMFmu8w7qZeMAiJUMeorRJa/",
+  "0x66A71Dcef29A0fFBDBE3c6a460a3B5BC225Cd675",
+  0,
+  1221,
+  "0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48",
+  "0x3A54802752fEFDc1aF2CD0b6DFA4F24694bDEE33"
+];
