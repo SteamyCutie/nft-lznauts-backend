@@ -42,6 +42,10 @@ npx hardhat deploy --network mumbai --tags MockPOZ
 
 npx hardhat verify --network mumbai --constructor-args "args/tPOZ.js" --contract "contracts/tokens/MockPOZ.sol:MockPOZ" [deployed address]
 
+npx hardhat deploy --network pulsechain-testnet2b --tags MockUSDC
+
+npx hardhat deploy --network pulsechain-testnet2b --tags Endpoint
+
 ```
 
 ```sh
@@ -49,9 +53,7 @@ npx hardhat deploy --network bsc-testnet --tags PozzlenautsONFT
 
 npx hardhat verify --network bsc-testnet --constructor-args "args/bscTestnet.js" --contract "contracts/PozzlenautsONFT.sol:PozzlenautsONFT" [deployed address]
 
-npx hardhat deploy --network rinkeby --tags PozzlenautsONFT
-
-npx hardhat verify --network rinkeby --constructor-args "args/rinkeby.js" --contract "contracts/PozzlenautsONFT.sol:PozzlenautsONFT" [deployed address]
+npx hardhat deploy --network pulsechain-testnet2b --tags PozzlenautsONFT
 
 ------------------ For Polygon and Mumbai --------------------
 
@@ -85,21 +87,22 @@ Approve specific amount of USDC to be transferred for minting at Blockchain Expl
 ```sh
 npx hardhat --network bsc-testnet pozzlenautsMint
 
-npx hardhat --network rinkeby pozzlenautsMint
+npx hardhat --network pulsechain-testnet2b pozzlenautsMint
 ```
 
 ```sh
 npx hardhat --network bsc-testnet pozzlenautsOwnerOf --token-id 1622
 
-npx hardhat --network mumbai pozzlenautsOwnerOf --token-id 1226
+npx hardhat --network pulsechain-testnet2b pozzlenautsOwnerOf --token-id 2022
 ```
 
 ```sh
-npx hardhat --network mumbai pozzlenautsSend --target-network bsc-testnet --token-id 1222
+npx hardhat --network bsc-testnet pozzlenautsSend --target-network pulsechain-testnet2b --token-id 1622
+npx hardhat --network pulsechain-testnet2b pozzlenautsSend --target-network bsc-testnet --token-id 2022
 ```
 
 ```sh
 npx hardhat --network bsc-testnet pozzlenautsOwnerOf --token-id 1622
 
-npx hardhat --network mumbai pozzlenautsOwnerOf --token-id 1222
+npx hardhat --network pulsechain-testnet2b pozzlenautsOwnerOf --token-id 2022
 ```

@@ -2,7 +2,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const { task } = require("hardhat/config");
-const utils = require('ethers').utils
+const utils = require("ethers").utils;
 require("@nomiclabs/hardhat-waffle");
 require("@nomiclabs/hardhat-etherscan");
 require("hardhat-deploy");
@@ -42,7 +42,7 @@ const chainIds = {
   bsc: 56,
   avalanche: 43114,
   polygon: 137,
-  arbitrumOne:42161,
+  arbitrumOne: 42161,
   optimism: 10,
 
   goerli: 5,
@@ -56,6 +56,7 @@ const chainIds = {
   "arbitrum-rinkeby": 421611,
   "optimism-kovan": 69,
   "fantom-testnet": 4002,
+  "pulsechain-testnet2b": 941,
 };
 
 module.exports = {
@@ -123,7 +124,12 @@ module.exports = {
       url: `https://kovan.optimism.io/`,
       chainId: chainIds["optimism-kovan"],
       accounts: accounts(),
-    }
+    },
+    "pulsechain-testnet2b": {
+      url: `https://rpc.v2b.testnet.pulsechain.com`,
+      chainIds: chainIds["pulsechain-testnet2b"],
+      accounts: accounts(),
+    },
   },
   etherscan: {
     apiKey: {
@@ -230,4 +236,3 @@ module.exports = {
     },
   },
 };
-

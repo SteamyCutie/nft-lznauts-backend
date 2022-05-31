@@ -25,12 +25,6 @@
     "endMintId": 2021,
     "usdcAddress": "0xFF970A61A04b1cA14834A43f5dE4533eBDDB5CC8"
   },
-  "optimism": {
-    "startMintId": 2022,
-    "endMintId": 2222,
-    "usdcAddress": "0x7F5c764cBc14f9669B88837ca1490cCa17c31607"
-  },
-
   "rinkeby": {
     "startMintId": 0,
     "endMintId": 1221,
@@ -57,7 +51,7 @@
     "endMintId": 2021,
     "usdcAddress": "0x463d55d6416a7CCa1f7C005a6AC8f0dD70a6f410"
   },
-  "optimism-kovan": {
+  "pulsechain-testnet2b": {
     "startMintId": 2022,
     "endMintId": 2222,
     "usdcAddress": "0x463d55d6416a7CCa1f7C005a6AC8f0dD70a6f410"

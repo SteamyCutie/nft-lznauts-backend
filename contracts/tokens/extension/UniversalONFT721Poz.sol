@@ -17,8 +17,8 @@ contract UniversalONFT721Poz is Ownable, ONFT721, ReentrancyGuard {
     uint256 public nextMintId;
     uint256 public maxMintId;
 
-    uint256 public publicPrice = 199;
-    uint256 public greenPrice = 150;
+    uint256 public publicPrice = 0;
+    uint256 public greenPrice = 0;
     uint256 public initPoz = 60;
 
     uint256 public publicDate = block.timestamp;

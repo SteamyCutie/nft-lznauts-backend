@@ -7,11 +7,10 @@ module.exports = async function (taskArgs, hre) {
   const tokenId = taskArgs.tokenId;
   var pozzlenautsONFT;
 
-  if(hre.network.name === "polygon" || hre.network.name === "mumbai")
+  if (hre.network.name === "polygon" || hre.network.name === "mumbai")
     pozzlenautsONFT = await ethers.getContract("PozzlenautsONFTPoz");
-  else
-    pozzlenautsONFT = await ethers.getContract("PozzlenautsONFT");
-  
+  else pozzlenautsONFT = await ethers.getContract("PozzlenautsONFT");
+
   console.log(`[source] PozzlenautsONFT.address: ${pozzlenautsONFT.address}`);
 
   let adapterParams = ethers.utils.solidityPack(
@@ -30,7 +29,7 @@ module.exports = async function (taskArgs, hre) {
         ethers.constants.AddressZero,
         adapterParams,
         {
-          value: ethers.utils.parseEther("1"),
+          value: ethers.utils.parseEther("0.01"),
         }
       )
     ).wait();
